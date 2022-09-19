@@ -9,8 +9,8 @@ $score_english = trim(fgets(STDIN));
 // ここに処理を記述
 if($score_math >= 60 && $score_english >= 60){
     echo '合格';
-}elseif($score_math < 60 && $score_english < 60){
-    echo '不合格';
-}else{
+} elseif ($score_math >= 60 || $score_english >= 60) {
     echo '再試験';
+} else {
+    echo '不合格';
 };
