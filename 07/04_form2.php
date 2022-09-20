@@ -97,15 +97,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <table>
             <tr>
                 <td>名前:</td>
-                <td><?= $name ?></td>
+                <td><?=  htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?></td>
             </tr>
             <tr>
                 <td>電話番号:</td>
-                <td><?= $tel ?></td>
+                <td><?=  htmlspecialchars($tel, ENT_QUOTES, 'UTF-8') ?></td>
             </tr>
             <tr>
                 <td>メールアドレス:</td>
-                <td><?= $email ?></td>
+                <td><?= htmlspecialchars($tel, ENT_QUOTES, 'UTF-8') ?></td>
             </tr>
             <tr>
                 <td>購入するもの:</td>
