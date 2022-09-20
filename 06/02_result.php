@@ -1,7 +1,7 @@
 <?php 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // フォームに入力されたデータを受け取る
-    $name = filter_input(INPUT_POST, 'name');
+    $name = $_POST['name'];
 };
 
 ?>

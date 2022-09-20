@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // フォームに入力されたデータを受け取る
-    $age = filter_input(INPUT_POST, 'age');
+    $age = $_POST['age'];
 
     // 初期化
     $errors = [];
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input id="age_area" name="age" type="text">
         <input type="submit" value="送信">
     </form>
-    <?php if (!empty($age)) : ?>
+    <?php if ($age) : ?>
         <p>私は<?= htmlspecialchars($age, ENT_QUOTES, 'UTF-8') ?>歳です。</p>
     <?php endif; ?>
 </body>

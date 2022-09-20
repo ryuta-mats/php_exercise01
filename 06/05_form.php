@@ -42,25 +42,31 @@ function h($str)
 
 <body>
     <h1>数字を入力して下さい</h1>
-    <?php if (!empty($errors)) : ?>
+    <?php if ($errors) : ?>
         <ul>
             <?php foreach ($errors as $error) : ?>
-                <li><?= h($error) ?></li>
+                <li><?= $error ?></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
     <form action="" method="post">
-        <p>1つ目の数字</p>
-        <p><input type="text" name="num1"></p>
-        <p>2つ目の数字</p>
-        <p><input type="text" name="num2"></p>
-        <p>3つ目の数字</p>
-        <p><input type="text" name="num3"></p>
+        <div>
+            <label for="num1">1つ目の数字</label><br>
+            <input id="num1" type="text" name="num1">
+        </div>
+        <div>
+            <label for="num2">2つ目の数字</label><br>
+            <input id="num2" type="text" name="num2">
+        </div>
+        <div>
+            <label for="num3">3つ目の数字</label><br>
+            <input id="num3" type="text" name="num3">
+        </div>
         <input type="submit">
     </form>
 
-    <?php if (!empty($total)) : ?>
-        <p>合計値は<?= $total ?>です</p>
+    <?php if ($total) : ?>
+        <p>合計値は<?= h($total) ?>です</p>
     <?php endif; ?>
 
 </body>
