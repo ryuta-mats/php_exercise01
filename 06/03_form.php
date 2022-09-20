@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input id="age_area" name="age" type="text">
         <input type="submit" value="送信">
     </form>
-    <?php if ($age) : ?>
+    <?php if (!empty($age)) : ?>
         <p>私は<?= htmlspecialchars($age, ENT_QUOTES, 'UTF-8') ?>歳です。</p>
     <?php endif; ?>
 </body>

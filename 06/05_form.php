@@ -42,7 +42,7 @@ function h($str)
 
 <body>
     <h1>数字を入力して下さい</h1>
-    <?php if ($errors) : ?>
+    <?php if (!empty($errors)) : ?>
         <ul>
             <?php foreach ($errors as $error) : ?>
                 <li><?= $error ?></li>
@@ -65,7 +65,7 @@ function h($str)
         <input type="submit">
     </form>
 
-    <?php if ($total) : ?>
+    <?php if (!empty($total)) : ?>
         <p>合計値は<?= h($total) ?>です</p>
     <?php endif; ?>
 
